@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lini Window Cleaning Ltd – Sparkling Windows in West London</title>
+  <meta name="description" content="Professional window cleaning in West London. Residential & commercial. Gutter cleaning. Friendly, punctual, great reviews. Get a quote today." />
+  <style>
+    :root{
+      --green-50:#f0fdf4; /* very light */
+      --green-100:#dcfce7;
+      --green-200:#bbf7d0;
+      --green-300:#86efac; /* light green accent */
+      --green-700:#15803d;
+      --ink-900:#0b1324;
+      --ink-600:#475569;
+      --bg:#ffffff;
+      --card:#ffffff;
+      --radius:18px;
+      --shadow:0 10px 25px rgba(0,0,0,.08);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif;color:var(--ink-900);background:var(--bg);}
+    a{color:var(--green-700);text-decoration:none}
+    img{max-width:100%;display:block;border-radius:12px}
+    .container{max-width:1100px;margin-inline:auto;padding:0 20px}
+    header{position:sticky;top:0;background:linear-gradient(180deg,var(--green-100),#fff);backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid var(--green-200);z-index:50}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:10px}
+    .brand .logo{width:40px;height:40px;border-radius:12px;background:var(--green-300);display:grid;place-items:center;color:#064e3b;font-weight:800;box-shadow:var(--shadow)}
+    .brand strong{font-size:1.1rem}
+    .nav a.btn{padding:10px 14px;border-radius:999px;border:1px solid var(--green-300);background:var(--green-50)}
+    .hero{background:linear-gradient(180deg,var(--green-50),#fff);padding:56px 0 24px}
+    .hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:var(--green-100);border:1px solid var(--green-200);font-size:12px}
+    h1{font-size:clamp(28px,4vw,42px);line-height:1.1;margin:10px 0 14px}
+    .sub{color:var(--ink-600);max-width:52ch}
+    .cta{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:12px;border:1px solid #e5e7eb;background:#fff;cursor:pointer}
+    .btn.primary{background:var(--green-700);color:white;border-color:var(--green-700)}
+    section{padding:42px 0}
+    .grid{display:grid;gap:18px}
+    .grid.cols-3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+    .grid.cols-2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+    .card{background:var(--card);border:1px solid #e5e7eb;border-radius:var(--radius);box-shadow:var(--shadow);padding:18px}
+    .section-title{display:flex;align-items:end;justify-content:space-between;margin-bottom:16px}
+    .muted{color:var(--ink-600)}
+    .gallery img{aspect-ratio:4/3;object-fit:cover}
+    .review{display:flex;flex-direction:column;gap:10px}
+    .stars{color:#f59e0b}
+    form{display:grid;gap:12px}
+    input, textarea, select{padding:12px 14px;border:1px solid #e5e7eb;border-radius:12px;font:inherit}
+    /* Wider message box */
+    textarea{width:100%;min-height:120px;resize:vertical}
+    .footer{background:#f8fafc;border-top:1px solid #e5e7eb;color:#334155}
+    .footer small{display:block}
+
+    /* Services — cards with mini SVG icons */
+    .service-card{text-align:center;padding:24px}
+    .service-card .icon{width:44px;height:44px;margin:0 auto 12px}
+    .service-card h3{margin:10px 0 6px;font-size:1.1rem}
+    .service-card p{color:var(--ink-600);font-size:.96rem}
+
+    /* Reviews show/hide */
+    #more-reviews{display:none}
+    .see-more{margin-top:16px}
+
+    /* Collapsible (Leave a review) */
+    details.accordion{margin-top:18px}
+    details.accordion summary{
+      list-style:none; cursor:pointer; user-select:none;
+      padding:12px 16px; border:1px solid #e5e7eb; border-radius:12px;
+      background:var(--green-50); display:flex; align-items:center; justify-content:space-between;
+    }
+    details.accordion[open] summary{border-bottom-left-radius:0;border-bottom-right-radius:0}
+    details.accordion .content{
+      border:1px solid #e5e7eb;border-top:0;border-bottom-left-radius:12px;border-bottom-right-radius:12px;padding:0;
+    }
+
+    @media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">LW</div>
+        <strong>Lini Window Cleaning Ltd</strong>
+      </div>
+      <nav>
+        <a class="btn" href="#gallery">Photos</a>
+        <a class="btn" href="#reviews">Reviews</a>
+        <a class="btn" href="#quote">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container wrap">
+      <div>
+        <span class="badge">11+ years experience • West London</span>
+        <h1>Crystal-clear windows, every time.</h1>
+        <p class="sub">Reliable residential & commercial window cleaning. We also do gutters and conservatory roofs. Friendly, punctual, and tidy.</p>
+        <div class="cta">
+          <a class="btn primary" href="#quote">Get a Quote</a>
+          <a class="btn" href="https://wa.me/447375784067" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn" href="tel:+447375784067">Call</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="Lini_actual_house.png" alt="Cleaner wiping a window with a squeegee"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES: three cards with mini SVG icons -->
+  <section id="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>Services</h2>
+        <p class="muted">Residential • Commercial • One-off or monthly</p>
+      </div>
+
+      <div class="grid cols-3">
+        <!-- Window Cleaning -->
+        <div class="card service-card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="2.5" stroke="#15803d" stroke-width="1.6"/>
+            <path d="M3 9.5h18M12 3v18" stroke="#15803d" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+          <h3>Window Cleaning</h3>
+          <p>Inside & outside, frames, sills & ledges. Regular or one-off.</p>
+        </div>
+
+        <!-- Gutter Cleaning -->
+        <div class="card service-card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M3 7h18l-2 5H5L3 7z" stroke="#15803d" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M6 12v5a3 3 0 0 0 3 3h6" stroke="#15803d" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <h3>Gutter Cleaning</h3>
+          <p>Prevent leaks & damage with a safe, efficient clear-out.</p>
+        </div>
+
+        <!-- Conservatory Roofs -->
+        <div class="card service-card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 11l8-6 8 6v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-8z" stroke="#15803d" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M4 11h16M8 20v-5m8 5v-5" stroke="#15803d" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+          <h3>Conservatory Roofs</h3>
+          <p>Glass & polycarbonate roofs cleaned to a clear shine.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="container">
+      <div class="section-title">
+        <h2>Photos</h2>
+        <p class="muted">A few recent jobs</p>
+      </div>
+      <div class="grid cols-3 gallery">
+        <!-- Replace these with your own photos -->
+        <img src="Lini_House.png" alt="Before and after – bay window"/>
+        <img src="Lini_school.png" alt="Commercial frontage cleaned"/>
+        <img src="Lini_cleaning_stand.PNG" alt="Conservatory roof cleared"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews">
+    <div class="container">
+      <div class="section-title">
+        <h2>Reviews</h2>
+        <p class="muted">What neighbours say</p>
+      </div>
+
+      <!-- Top 6 (best, most detailed) -->
+      <div class="grid cols-3" id="top-reviews">
+        <div class="card review">
+          <div class="stars">★★★★★</div>
+          <p>“Prompt and a pleasure to have in our home — the team did a phenomenal job on all our windows. Better price and higher standard than the big services. Even picked up roof litter while cleaning! We’ll be regulars.”</p>
+          <small>— O. B., 30 Jul</small>
+        </div>
+        <div class="card review">
+          <div class="stars">★★★★★</div>
+          <p>“Excellent job at a reasonable price. Quick to reply and schedule. He and his colleague, Arjan, were extremely courteous and well mannered. A pleasure to work with — I’ll make it a regular thing.”</p>
+          <small>— S. T., 26 Jul</small>
+        </div>
+        <div class="card review">
+          <div class="stars">★★★★★</div>
+          <p>“Very good work and respectful in the home. Went above and beyond to finish on a Saturday because some windows were sealed shut. Bonus: kept the kids entertained watching the ‘window cleaning show’!”</p>
+          <small>— A. B., 19 Jul</small>
+        </div>
+        <div class="card review">
+          <div class="stars">★★★★★</div>
+          <p>“Punctual, polite, and very efficient. Hard to find someone trustworthy for small domestic jobs — my windows were filthy and now spotless. He even refused extra payment. A great find for the neighbourhood!”</p>
+          <small>— F. T., 14 Nov</small>
+        </div>
+        <div class="card review">
+          <div class="stars">★★★★★</div>
+          <p>“Amazing job. On time, fast, clean and tidy, very polite. Spoke at 9pm and by 8:45am our windows were shining.”</p>
+          <small>— L. C., 12 Aug ’24</small>
+        </div>
+        <div class="card review">
+          <div class="stars">★★★★★</div>
+          <p>“Internal & external windows on our 2nd-floor flat — crystal clean and better (and cheaper) than the commercial company we used before. Gladly recommend.”</p>
+          <small>— S. B., 11 Aug ’24</small>
+        </div>
+      </div>
+
+      <!-- More reviews (hidden initially) -->
+      <div class="grid cols-3" id="more-reviews" aria-hidden="true">
+        <div class="card review"><div class="stars">★★★★★</div><p>“Excellent service — truly can’t recommend Lini more highly.”</p><small>— J. H., 6 Jun</small></div>
+        <div class="card review"><div class="stars">★★★★★</div><p>“Messaged at 8am, by 11am the windows were crystal clean. Will use again — thank you!”</p><small>— C. K., 1 Aug ’24</small></div>
+        <div class="card review"><div class="stars">★★★★★</div><p>“Attention to detail is fantastic, and he arrives exactly when he says he will.”</p><small>— I. V., 1 Aug ’24</small></div>
+        <div class="card review"><div class="stars">★★★★★</div><p>“Sparkly and immaculate. Honest, reliable, genuine and very well priced.”</p><small>— K. D., 16 Apr ’24</small></div>
+        <div class="card review"><div class="stars">★★★★★</div><p>“4th-floor with awkward access — he manages every time. Highly recommend!”</p><small>— M. C., 28 Mar ’24</small></div>
+        <div class="card review"><div class="stars">★★★★★</div><p>“First clean in years — professional, fast, thorough and reasonably priced.”</p><small>— L. M., 21 Aug ’23</small></div>
+        <div class="card review"><div class="stars">★★★★★</div><p>“Very professional and great value.”</p><small>— G. H., 27 Jul ’23</small></div>
+        <div class="card review"><div class="stars">★★★★★</div><p>“Windows inside & out plus paintwork — excellent job and a thoroughly nice chap.”</p><small>— C. M., 28 Jul ’23</small></div>
+        <div class="card review"><div class="stars">★★★★★</div><p>“Super nice guy and a wonderful job after decorating. Highly recommend.”</p><small>— N. W., 2 Aug ’23</small></div>
+        <div class="card review"><div class="stars">★★★★★</div><p>“The very best. Large conservatory and lots of windows — never had better results.”</p><small>— V. T., 2 Aug ’23</small></div>
+        <div class="card review"><div class="stars">★★★★★</div><p>“Result is fantastic — very professional and reliable. Highly recommend.”</p><small>— J. J., 6 Aug ’23</small></div>
+        <div class="card review"><div class="stars">★★★★★</div><p>“Excellent service. Very professional. We’ll be regular customers now!”</p><small>— L. Z., 18 Aug</small></div>
+      </div>
+
+      <div class="see-more">
+        <button class="btn" id="toggle-more">See more reviews</button>
+      </div>
+
+      <p class="muted" style="margin-top:10px">
+        See more on <a href="https://nextdoor.co.uk/pages/lini-window-cleaning-ltd-london-england/" target="_blank" rel="noopener">Nextdoor</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- QUOTE FORM -->
+  <section id="quote">
+    <div class="container">
+      <div class="section-title"><h2>Get a Quote</h2><p class="muted">We aim to reply the same day</p></div>
+      <form class="card" action="https://formsubmit.co/YOUREMAIL@example.com" method="POST">
+        <input type="hidden" name="_subject" value="New Quote Request – Lini Window Cleaning" />
+        <input type="hidden" name="_captcha" value="false" />
+        <label>
+          Name
+          <input name="name" placeholder="Your name" required />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" placeholder="you@example.com" required />
+        </label>
+        <label>
+          Phone (optional)
+          <input name="phone" placeholder="07…" />
+        </label>
+        <label>
+          Address / Postcode
+          <input name="address" placeholder="e.g., W6 9YN" required />
+        </label>
+        <label>
+          Service needed
+          <select name="service">
+            <option>Windows (inside & outside)</option>
+            <option>Gutters</option>
+            <option>Conservatory roof</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="4" placeholder="Tell us about your property and preferred dates" required></textarea>
+        </label>
+        <button class="btn primary" type="submit">Send Request</button>
+        <small class="muted">Prefer WhatsApp? Message us on <a href="https://wa.me/447375784067" target="_blank" rel="noopener">07375 784067</a>.</small>
+      </form>
+    </div>
+  </section>
+
+  <!-- LEAVE A REVIEW (moved further down, collapsible) -->
+  <section id="leave-review">
+    <div class="container">
+      <details class="accordion">
+        <summary>
+          <strong>Leave a review</strong>
+          <span aria-hidden="true">▼</span>
+        </summary>
+        <div class="content">
+          <form class="card" action="https://formsubmit.co/YOUREMAIL@example.com" method="POST">
+            <input type="hidden" name="_subject" value="New Public Review – Lini Window Cleaning" />
+            <input type="hidden" name="_captcha" value="false" />
+            <label>
+              Your name (or initials)
+              <input name="name" placeholder="e.g., O. B." required />
+            </label>
+            <label>
+              Rating
+              <select name="rating" required>
+                <option value="★★★★★">★★★★★ Excellent</option>
+                <option value="★★★★☆">★★★★☆ Very good</option>
+                <option value="★★★☆☆">★★★☆☆ Good</option>
+                <option value="★★☆☆☆">★★☆☆☆ Fair</option>
+                <option value="★☆☆☆☆">★☆☆☆☆ Poor</option>
+              </select>
+            </label>
+            <label>
+              Review
+              <textarea name="review" rows="5" placeholder="Tell neighbours what you liked and which service you used" required></textarea>
+            </label>
+            <label>
+              Area (optional)
+              <input name="area" placeholder="e.g., Sands End / W6" />
+            </label>
+            <button class="btn primary" type="submit">Submit Review</button>
+          </form>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container" style="padding:24px 0">
+      <strong>Lini Window Cleaning Ltd</strong>
+      <small>Queen Caroline Street, London W6 9YN</small>
+      <small>Mobile & WhatsApp: <a href="tel:+447375784067">07375 784067</a> · <a href="mailto:lini.windowclean@gmail.com">lini.windowclean@gmail.com</a></small>
+      <small>© <span id="y"></span> Lini Window Cleaning Ltd</small>
+    </div>
+  </footer>
+
+  <script>
+    // Footer year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Show/hide more reviews
+    const more = document.getElementById('more-reviews');
+    const btn = document.getElementById('toggle-more');
+    btn.addEventListener('click', () => {
+      const open = more.style.display === 'grid' || more.style.display === '';
+      if(open){
+        more.style.display = 'none';
+        more.setAttribute('aria-hidden','true');
+        btn.textContent = 'See more reviews';
+      }else{
+        more.style.display = 'grid';
+        more.setAttribute('aria-hidden','false');
+        btn.textContent = 'See fewer reviews';
+      }
+    });
+  </script>
+</body>
+</html>
